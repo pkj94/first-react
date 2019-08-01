@@ -56,13 +56,12 @@ export default class App extends Component {
 
   componentDidMount() {
 
-
-    NetInfo.isConnected.addEventListener('connectionChange', this.handleConnectivityChange);
+    // NetInfo.isConnected.addEventListener('connectionChange', this.handleConnectivityChange);
   }
 
   componentWillUnmount() {
 
-    NetInfo.isConnected.removeEventListener('connectionChange', this.handleConnectivityChange);
+    // NetInfo.isConnected.removeEventListener('connectionChange', this.handleConnectivityChange);
   }
 
   handleConnectivityChange = isConnected => {
@@ -77,7 +76,7 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <SafeAreaView
-          forceInset={{ bottom: Platform.OS == 'ios' && deviceWidthLarge ? 30 : null }}
+          forceInset={{ bottom: "always" }}
           style={styles.container}>
           <MyStatusBar backgroundColor={'white'} barStyle="dark-content" />
           <Routes />

@@ -11,6 +11,8 @@ export function getFontSize(size) {
     if (USE_FOR_BIGGER_SIZE || CURRENT_WIDTH < STANDARD_WIDTH) { const newSize = dynamicSize(size); return newSize; }
     return size;
 }
+export const Width = Dimensions.get('window').width;
+export const Height = Dimensions.get('window').height;
 export const themeColor = '#56B24D';
 // export const themeColor = '#4577c6';
 export const orange = '#F49930';
