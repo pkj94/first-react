@@ -17,8 +17,8 @@ class Login extends Component {
         return (
             <View style={Style.container}>
                 <Image resizeMode="contain" style={Style.logoImage} source={require('../../../assets/image/logo.png')}></Image>
-                <TextInput style={Style.input} value={this.state.username} editable = {true} inlineImageLeft='search_icon'></TextInput>
-                <TextInput style={Style.input}  value={this.state.password} password editable = {true}></TextInput>
+                <TextInput style={Style.input} value={this.state.username} editable = {true} inlineImageLeft='search_icon' onChangeText={(text) => this.setState({username:text})}></TextInput>
+                <TextInput style={Style.input}  value={this.state.password} password editable = {true} onChangeText={(text) => this.setState({password: text})}></TextInput>
                 <View style={Style.buttonView}>
                     <TouchableOpacity
                         style={Style.buttonTouch}
