@@ -29,7 +29,8 @@ export default StyleSheet.create({
     bottomViewInnerText: {
         fontWeight: '700'
     },
-    input: {
+    inputContainer: {
+        flexDirection: 'row',
         borderColor: '#e9e9e9',
         borderWidth: 1,
         width: '80%',
@@ -37,9 +38,19 @@ export default StyleSheet.create({
         marginBottom: dynamicSize(10),
         paddingStart: dynamicSize(10),
         paddingEnd: dynamicSize(10),
+        alignItems: 'center'
+    },
+    input: {
+        flex: 1,
+        paddingStart: dynamicSize(10),
+        paddingEnd: dynamicSize(10),
     },
     buttonView: {
         width: '80%',
+
+    },
+    buttonTouch: {
+        width: '100%',
         backgroundColor: "#e69d48",
         textTransform: 'none',
         height: dynamicSize(40),
@@ -54,6 +65,7 @@ export default StyleSheet.create({
     forgotOuterText: {
         marginTop: dynamicSize(10),
         color: "#7a7a7a",
+        lineHeight: dynamicSize(30),
         fontSize: dynamicSize(12)
     },
     forgotInnerText: {
@@ -71,8 +83,26 @@ export default StyleSheet.create({
         position: 'absolute',
         color: '#7a7a7a',
         padding: dynamicSize(10),
-        top: -23,
+        top: -17,
         backgroundColor: 'white',
-        fontSize: dynamicSize(12)
+        fontSize: dynamicSize(12),
+        fontWeight: '700'
+    },
+    Social: {
+        width: '80%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        flex: 1,
+        maxHeight: dynamicSize(35),
+        marginTop: dynamicSize(20)
+    },
+    facebookImage: {
+        width: '100%',
+        height: dynamicSize(35),
+        marginEnd: dynamicSize(10)
+    },
+    googleImage: {
+        width: '100%',
+        height: dynamicSize(35)
     }
 });
